@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“及”在汉语学术论文写作中的习得情况调查问卷 Investigation Questionnaire on the usage of the Conjunction “及” in academic paper
+        writing
+    </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            padding-top: 20px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 40vh;
+            width: 80vw;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mb-5">“及”在汉语学术论文写作中的习得情况调查问卷<br>
+            Investigation Questionnaire on the usage of the Conjunction “及” in academic paper writing
+        </h2>
+        <!-- 第一部分-基本信息 -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-5">第一部分 - 基本信息</h2>
+
+            <!-- Country Chart -->
+            <div class="card mb-4">
+                <div class="card-header">1.你来自哪个国家？</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="countryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Native Language Chart -->
+            <div class="card mb-4">
+                <div class="card-header">2.你的母语是什么？</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="nativeLanguageChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">3.你是否为华裔家庭？</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="descentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">4.目前你掌握的汉字量有多少？</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="charactersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">5.你是否进行过汉语学术论文的写作？</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="papersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">6.你之前是否学习过汉语学术论文写作的相关课程？</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="coursesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">7.你之前是否使用过有关汉语学术论文写作的教材？</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="textbooksChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional charts for 第一部分 - 基本信息 follow the same structure -->
+
+        </div>
+
+
+        <!-- 第二部分-语言测试题 -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-5">第二部分 - 语言测试题</h2>
+
+            <div class="card mb-4">
+                <div class="card-header">1. 2023年6月9日，数万名网友相约同时对中国明星团体（ ）粉丝开展抗议活动。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="question1Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">2. 接下来将对本文的研究意义、研究内容与研究方法，（ ）创新之处加以简要介绍。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="question2Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">3. 教师在课堂中应认真讲解课本知识、重视学生自学能力（ ）培养学生独立思考的能力。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="question3Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">4. 当前中国经济和产业的发展方向（ ）其拥有的国际关系非常重要。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="question4Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">5. 本次考试的评分分值都在（ ）。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="question5Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">6. 在“一带一路”倡议框架内，两个国家旅游业的合作更亲密且更广泛，（ ）政府支持力度也增加了。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="question6Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三部分-判断题 -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-5">第三部分 - 判断题</h2>
+
+            <!-- TrueFalse1 Chart -->
+            <div class="card mb-4">
+                <div class="card-header">1. 中国有关动物成语中不仅有平常的动物名词，及凤，龙，龟等神话中的动物。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="trueFalse1Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">2. 人工智能的核心本质及其研究意义。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="trueFalse2Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">3. 中文小说中的成语及其翻译研究。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="trueFalse3Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">4. 留学生掌握学术论文写作程度及相关问题研究。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="trueFalse4Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">5. 作者认为适应具有一个基本原则及保持自身传统文化。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="trueFalse5Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">6. 在这里，星巴克为顾客提供了沙发区、长桌聚会区等不同的座位区及免费WiFi上网。</div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="trueFalse6Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional true/false questions for 第三部分 - 判断题 follow the same structure -->
+
+        </div>
+
+        <h2 class="text-center mb-5">第四部分 - 选词填空题</h2>
+
+        <!-- Question 1 -->
+        <div class="card">
+            <div class="card-header">1. 该公司在智能电视、智能手机、家用冰箱、家用空调（ ）电子产品领域取得了不错的利润。</div>
+            <div class="card-body">
+                <div class="chart-container">
+                    <canvas id="wordFill1Chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="card">
+            <div class="card-header">2. 论文标题:《中国诗词中的民主思想（ ）文化内涵》</div>
+            <div class="card-body">
+                <div class="chart-container">
+                    <canvas id="wordFill2Chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="card">
+            <div class="card-header">3. 文化误解会给对方留下不好的印象（ ）引起冲突。</div>
+            <div class="card-body">
+                <div class="chart-container">
+                    <canvas id="wordFill3Chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function initializeChart(chartId, chartType, chartLabels, chartData, chartLabel) {
+            const ctx = document.getElementById(chartId).getContext('2d');
+            new Chart(ctx, {
+                type: chartType,
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: chartLabel,
+                        data: chartData,
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(199, 199, 199, 0.2)',
+                            'rgba(22, 160, 133, 0.2)',
+                            // Extend as needed
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255,99,132,1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(199, 199, 199, 1)',
+                            'rgba(22, 160, 133, 1)',
+                            // Extend as needed
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Chart configurations
+        const chartsConfig = [
+            {
+                id: 'countryChart',
+                type: 'bar',
+                labels: ['韩国', '日本', '印度', '巴基斯坦', '泰国', '俄罗斯', '其他'],
+                data: [10, 8, 6, 6, 4, 4, 11],
+                label: '国籍人数'
+            },
+            {
+                id: 'nativeLanguageChart',
+                type: 'bar',
+                labels: ['韩语', '日语', '印地语', '乌尔都语', '泰语', '俄语', '其他'],
+                data: [10, 8, 6, 6, 4, 4, 11],
+                label: '母语人数'
+            },
+            {
+                id: 'descentChart',
+                type: 'bar',
+                labels: ['是', '否'],
+                data: [0, 49],
+                label: '是否为华裔家庭'
+            },
+            {
+                id: 'charactersChart',
+                type: 'bar',
+                labels: ['300 (HSK 3级)', '800 (HSK 4级)', '1500 (HSK 5级)', '3000 (HSK 6级)'],
+                data: [0, 8, 17, 24],
+                label: '掌握汉字量'
+            },
+            {
+                id: 'papersChart',
+                type: 'bar',
+                labels: ['是', '否'],
+                data: [31, 18],
+                label: '是否写过汉语学术论文'
+            },
+            {
+                id: 'coursesChart',
+                type: 'bar',
+                labels: ['是', '否'],
+                data: [14, 35],
+                label: '是否学习过相关课程'
+            },
+            {
+                id: 'textbooksChart',
+                type: 'bar',
+                labels: ['是', '否'],
+                data: [13, 36],
+                label: '是否使用过教材'
+            }
+            // Add more chart configurations as needed
+        ];
+
+        // Function to create a chart
+        function createWordFillChart(canvasId, data, labels) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: '选择人数',
+                        data: data,
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1 // Ensures that the y-axis ticks are integers
+                            }
+                        }
+                    },
+                    legend: {
+                        display: false // Hides the legend to clean up the design
+                    },
+                    layout: {
+                        padding: {
+                            top: 20,
+                            bottom: 20
+                        }
+                    }
+                }
+            });
+        }
+
+        // Labels and data for the word filling questions
+        const labelsQ1 = ['等', '及', '和', '与', '还有', '以及', '而且', '不知道'];
+        const dataQ1 = [14, 7, 8, 4, 9, 3, 2, 2];
+        const labelsQ2 = ['及', '及其', '以及', '和', '且'];
+        const dataQ2 = [15, 5, 16, 12, 1];
+        const labelsQ3 = ['甚至', '还会', '同时', '并且', '及', '以及', '和'];
+        const dataQ3 = [13, 6, 8, 4, 9, 2, 7];
+
+        // Create charts for each word filling question
+        createWordFillChart('wordFill1Chart', dataQ1, labelsQ1);
+        createWordFillChart('wordFill2Chart', dataQ2, labelsQ2);
+        createWordFillChart('wordFill3Chart', dataQ3, labelsQ3);
+
+        function initializeChart(chartId, chartType, chartLabels, chartData, chartLabel) {
+            const ctx = document.getElementById(chartId).getContext('2d');
+            new Chart(ctx, {
+                type: chartType,
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: chartLabel,
+                        data: chartData,
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            // Extend the colors as needed
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255,99,132,1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            // Extend the colors as needed
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Adding question charts configurations
+        chartsConfig.push(
+            // Question 1
+            {
+                id: 'question1Chart',
+                type: 'bar',
+                labels: ['A及', 'B及其', 'C以及', 'D与'],
+                data: [5, 41, 2, 1],
+                label: '选择人数'
+            },
+            // Question 2
+            {
+                id: 'question2Chart',
+                type: 'bar',
+                labels: ['A及其', 'B与', 'C以及', 'D及'],
+                data: [2, 1, 44, 2],
+                label: '选择人数'
+            },
+            // Question 3
+            {
+                id: 'question3Chart',
+                type: 'bar',
+                labels: ['A和', 'B及', 'C及其', 'D以上三种都对'],
+                data: [20, 14, 5, 10],
+                label: '选择人数'
+            },
+            // Question 4
+            {
+                id: 'question4Chart',
+                type: 'bar',
+                labels: ['A且', 'B及', 'C和', 'D以上三种都对'],
+                data: [4, 24, 13, 8],
+                label: '选择人数'
+            },
+            // Question 5
+            {
+                id: 'question5Chart',
+                type: 'bar',
+                labels: ['A 3分及以上', 'B 3分及3分以上', 'C 3分及其以上', 'D以上三种都对'],
+                data: [4, 3, 7, 35],
+                label: '选择人数'
+            },
+            // Question 6
+            {
+                id: 'question6Chart',
+                type: 'bar',
+                labels: ['A 及', 'B 及其', 'C 同时', 'D以上三种都对'],
+                data: [4, 3, 41, 1],
+                label: '选择人数'
+            }
+            // Add more configurations if needed
+        );
+
+
+        // Extending the chartsConfig array with true/false questions configurations
+        chartsConfig.push(
+            // True/False Question 1
+            {
+                id: 'trueFalse1Chart',
+                type: 'bar',
+                labels: ['T', 'F'],
+                data: [42, 7],
+                label: '正确与否'
+            },
+            // True/False Question 2
+            {
+                id: 'trueFalse2Chart',
+                type: 'bar',
+                labels: ['T', 'F'],
+                data: [16, 33],
+                label: '正确与否'
+            },
+            // True/False Question 3
+            {
+                id: 'trueFalse3Chart',
+                type: 'bar',
+                labels: ['T', 'F'],
+                data: [17, 32],
+                label: '正确与否'
+            },
+            // True/False Question 4
+            {
+                id: 'trueFalse4Chart',
+                type: 'bar',
+                labels: ['T', 'F'],
+                data: [11, 38],
+                label: '正确与否'
+            },
+            // True/False Question 5
+            {
+                id: 'trueFalse5Chart',
+                type: 'bar',
+                labels: ['T', 'F'],
+                data: [25, 24],
+                label: '正确与否'
+            },
+            // True/False Question 6
+            {
+                id: 'trueFalse6Chart',
+                type: 'bar',
+                labels: ['T', 'F'],
+                data: [23, 26],
+                label: '正确与否'
+            }
+        );
+
+        // Initialize all charts
+        chartsConfig.forEach((config) => {
+            initializeChart(config.id, config.type, config.labels, config.data, config.label);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
